@@ -14,5 +14,6 @@ get '/nuclear-launch-codes' do
 end
 
 get '/cat' do
-    erb(:index)
+    @cat_name = ["Ali", "Will", "Ruby"].sample
+    erb :index
 end
