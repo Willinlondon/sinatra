@@ -13,7 +13,13 @@ get '/nuclear-launch-codes' do
     "1234"
 end
 
-get '/cat' do
+get '/random-cat' do
     @cat_name = ["Ali", "Will", "Ruby"].sample
+    erb :index
+end
+
+get '/named-cat' do
+    p params
+    @cat_name = params[:cat_name]
     erb :index
 end
